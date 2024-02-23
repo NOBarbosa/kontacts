@@ -1,0 +1,46 @@
+.register {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+
+  background-image: url("../../assets/ImagemDireita.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  position: relative;
+}
+.container {
+  display: flex;
+  position: absolute;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    margin-top: 32px;
+    gap: 16px;
+    button {
+      width: 80%;
+      text-transform: uppercase;
+    }
+    .btnGreen {
+      background-color: #04c45c;
+
+      margin-top: 50px;
+    }
+    .btnRed {
+      background-color: rgba(251, 6, 21, 0.65);
+    }
+    input {
+      width: 80%;
+    }
+  }
+}

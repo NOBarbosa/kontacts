@@ -1,5 +1,6 @@
 import { Pencil, Trash } from "phosphor-react";
 import s from "./table.module.scss";
+import { KONTACTS } from "../../data/data";
 export function Table() {
   return (
     <table className={s.table}>
@@ -11,36 +12,25 @@ export function Table() {
         <th></th>
       </thead>
       <tbody>
-        <tr>
-          <td>Natalia</td>
-          <td>nati@email</td>
-          <td>71999999999</td>
-          <td>
-            <div>
-              <Pencil role="button" />
-            </div>
-          </td>
-          <td>
-            <div>
-              <Trash role="button" />
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>Natalia</td>
-          <td>nati@email</td>
-          <td>71999999999</td>
-          <td>
-            <div>
-              <Pencil role="button" />
-            </div>
-          </td>
-          <td>
-            <div>
-              <Trash role="button" />
-            </div>
-          </td>
-        </tr>
+        {KONTACTS.map((kontact) => {
+          return (
+            <tr key={kontact.id}>
+              <td>{kontact.nome}</td>
+              <td>{kontact.email}</td>
+              <td>{kontact.telefone}</td>
+              <td>
+                <div>
+                  <Pencil role="button" />
+                </div>
+              </td>
+              <td>
+                <div>
+                  <Trash role="button" />
+                </div>
+              </td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
